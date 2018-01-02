@@ -1,9 +1,9 @@
 package cn.easybuy.dao.product;
 
+import cn.easybuy.dao.BaseDao;
 import cn.easybuy.pojo.ProductCategory;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;

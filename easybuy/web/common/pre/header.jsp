@@ -1,13 +1,25 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"  pageEncoding="utf-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%--
+  Created by IntelliJ IDEA.
+  User: yws
+  Date: 17-12-31
+  Time: 下午5:01
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="ctx" value="${pageContext.request.contextPath}" />
 <script type="text/javascript">
-  var contextPath = "${ctx}";
+    var contextPath = "${ctx}";
 </script>
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
 <div class="soubg">
-  <div class="sou">
-    <!--Begin 所在收货地区 Begin-->
-    	<span class="s_city_b">
+    <div class="sou">
+        <!--Begin 所在收货地区 Begin-->
+        <span class="s_city_b">
         	<span class="fl">送货至：</span>
             <span class="s_city">
             	<span>四川</span>
@@ -84,37 +96,37 @@
         <!--End 所在收货地区 End-->
         <span class="fr">
           <c:if test="${sessionScope.loginUser==null}">
-            <span class="fl">你好，请<a href="${ctx}/Login?action=toLogin"  style="color:#ff4e00;">登录</a>&nbsp;<a href="${ctx}/Register?action=toRegister" style="color:#ff4e00;">免费注册</a>&nbsp;&nbsp;</span>
+              <span class="fl">你好，请<a href="${ctx}/Login?action=toLogin"  style="color:#ff4e00;">登录</a>&nbsp;<a href="${ctx}/Register?action=toRegister" style="color:#ff4e00;">免费注册</a>&nbsp;&nbsp;</span>
           </c:if>
           <c:if test="${sessionScope.loginUser!=null}">
-            <span class="fl"><a href="${ctx}/admin/user?action=index">${sessionScope.loginUser.userName}</a>&nbsp;|&nbsp;<a href="${ctx}/admin/order?action=index&userId=${sessionScope.loginUser.id}">我的订单</a>&nbsp;</span>
+              <span class="fl"><a href="${ctx}/admin/user?action=index">${sessionScope.loginUser.userName}</a>&nbsp;|&nbsp;<a href="${ctx}/admin/order?action=index&userId=${sessionScope.loginUser.id}">我的订单</a>&nbsp;</span>
           </c:if>
            <c:if test="${sessionScope.loginUser!=null && sessionScope.loginUser.type==1}">
-            <span class="fl">|&nbsp;<a href="${ctx}/admin/product?action=index&userId=${sessionScope.loginUser.id}">后台管理</a>&nbsp;</span>
-          </c:if>
+               <span class="fl">|&nbsp;<a href="${ctx}/admin/product?action=index&userId=${sessionScope.loginUser.id}">后台管理</a>&nbsp;</span>
+           </c:if>
            <c:if test="${sessionScope.loginUser!=null}">
-             <span class="fl">|&nbsp;<a href="${ctx}/Login?action=loginOut" >注销</a></span>
-          </c:if>
+               <span class="fl">|&nbsp;<a href="${ctx}/Login?action=loginOut" >注销</a></span>
+           </c:if>
         </span>
-  </div>
+    </div>
 </div>
 <div id="fade1" class="black_overlay"></div>
 <div id="MyDiv1" class="white_content">
-  <div class="white_d">
-    <div class="notice_t">
-      <span class="fr" style="margin-top:10px; cursor:pointer;" onclick="CloseDiv_1('MyDiv1','fade1')"><img src="${ctx}/statics/images/close.gif" /></span>
+    <div class="white_d">
+        <div class="notice_t">
+            <span class="fr" style="margin-top:10px; cursor:pointer;" onclick="CloseDiv_1('MyDiv1','fade1')"><img src="${ctx}/statics/images/close.gif" /></span>
+        </div>
+        <div class="notice_c">
+            <table border="0" align="center" cellspacing="0" cellpadding="0">
+                <tr valign="top">
+                    <td width="40"><img src="${ctx}/statics/images/suc.png"></td>
+                    <td>
+                        <span style="color:#3e3e3e; font-size:18px; font-weight:bold;" id="showMessage">操作成功</span><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
-    <div class="notice_c">
-      <table border="0" align="center" cellspacing="0" cellpadding="0">
-        <tr valign="top">
-          <td width="40"><img src="${ctx}/statics/images/suc.png"></td>
-          <td>
-            <span style="color:#3e3e3e; font-size:18px; font-weight:bold;" id="showMessage">操作成功</span><br />
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
 </div>
 <link type="text/css" rel="stylesheet" href="${ctx}/statics/css/style.css"/>
 <script type="text/javascript" src="${ctx}/statics/js/common/jquery-1.11.1.min_044d0927.js"></script>
@@ -131,7 +143,8 @@
 <script type="text/javascript" src="${ctx}/statics/js/common/hban.js"></script>
 <script type="text/javascript" src="${ctx}/statics/js/common/tban.js"></script>
 <script type="text/javascript" src="${ctx}/statics/js/common/lrscroll_1.js"></script>
-
+<script type="text/javascript" src="${ctx}/statics/js/login/login.js"></script>
+<script type="text/javascript" src="${ctx}/statics/js/common/shade.js"></script>
 <script type="text/javascript" src="${ctx}/statics/js/register/register.js"></script>
 <link rel="stylesheet" type="text/css" href="${ctx}/statics/css/ShopShow.css" />
 <link rel="stylesheet" type="text/css" href="${ctx}/statics/css/MagicZoom.css" />
@@ -139,4 +152,5 @@
 <script type="text/javascript" src="${ctx}/statics/js/common/num.js"></script>
 <script type="text/javascript" src="${ctx}/statics/js/common/p_tab.js"></script>
 <script type="text/javascript" src="${ctx}/statics/js/common/shade.js"></script>
-
+</body>
+</html>

@@ -1,6 +1,3 @@
-/**
- * Created by bdqn on 2016/5/3.
- */
 //登录的方法
 function login(){
     var loginName=$("#loginName").val();

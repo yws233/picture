@@ -1,5 +1,5 @@
 /**
- * Created by bdqn on 2016/5/3.
+ * 登录控制
  */
 function register() {
     //获取相关字段的值

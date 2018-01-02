@@ -1,12 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<%--
+  Created by IntelliJ IDEA.
+  User: yws
+  Date: 18-1-2
+  Time: 上午9:53
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="ctx" value="${pageContext.request.contextPath}"></c:set>
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <%@ include file="/common/pre/header.jsp" %>
-    <title>易买网</title>
+    <title>注册页面</title>
 </head>
 <body>
+<%@ include file="../common/pre/header.jsp"%>
 <!--Begin Login Begin-->
 <div class="log_bg">
     <div class="top">
@@ -82,7 +89,5 @@
 </div>
 <!--End Footer End -->
 </body>
-<!--[if IE 6]>
-<script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
-<![endif]-->
+
 </html>
